@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Paralla Website</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<body>
+<header>
+<a href="#" class="logo">MoonLight</a>
+<ul>
+<li><a href="#" class="active">Home</a></li>
+<li><a href="#">About</a></li>
+<li><a href="#">Work</a></li>
+<li><a href="#">contact</a></li>
+
+
+</ul>
+
+
+</header>
+<section>
+<img src="stars.png" id="stars">
+<img src="moon.png" id="moon">
+<img src="mountains_behind.png" id="mountains_behind">
+<h2 id="text">Night Moon</h2>
+<a href="#sec"><p id="btn">Explore</p></a>
+<img src="mountains_front.png" id="mountains_front">
+
+</section>
+<div id="sec" class="sec">
+<h2>About Moon</h2>
+<p>The Moon is Earth's only proper natural satellite. At one-quarter the diameter of Earth (comparable to the width of Australia),[13] it is the largest natural satellite in the Solar System relative to the size of its planet,[f] and the fifth largest satellite in the Solar System overall (larger than any dwarf planet). Orbiting Earth at an average lunar distance of 384,400 km (238,900 mi),[14] or about 30 times Earth's diameter, its gravitational influence is the main driver of Earth's tides and slightly lengthens Earth's day. <br><br>The Moon is classified as a planetary-mass object and a differentiated rocky body, and lacks any significant atmosphere, hydrosphere, or magnetic field. Its surface gravity is about one-sixth of Earth's (0.1654 g); Jupiter's moon Io is the only satellite in the Solar System known to have a higher surface gravity and density.<br><br></p>
+
+</div>
+<script>
+let stars = document.getElementById('stars');
+let moon = document.getElementById('moon');
+let mountains_behind = document.getElementById('mountains_behind');
+let text = document.getElementById('text');
+let btn = document.getElementById('btn');
+let mountains_front = document.getElementById('mountains_front');
+let header = document.querySelector('header');
+
+window.addEventListener('scroll',function(){
+let value = window.scrollY;
+stars.style.left = value * 0.25 + 'px';
+moon.style.top = value * 1.25 +'px';
+mountains_behind.style.top = value * 0.5 +'px';
+mountains_front.style.top = value * 0 +'px';
+text.style.marginRight = value * 4 +'px';
+text.style.marginTop = value * 1.5 +'px';
+btn.style.marginTop = value * 1.5 +'px';
+header.style.top = value * 0.5 +'px';
+})
+
+
+</script>
+
+
+
+</body>
+
+
+
+</html>
